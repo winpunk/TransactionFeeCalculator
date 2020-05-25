@@ -185,7 +185,7 @@ namespace Fee_Calculator_Tests
                 feeGenerator.GenerateData(AppDomain.CurrentDomain.BaseDirectory + "\\transactions.txt");
 
                 // "expected output.txt" should be located where executable is.
-                using (var reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\expected output.txt"))
+                using (var reader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "\\expected_output.txt"))
                 {
                     expected = reader.ReadToEnd();
                 }
