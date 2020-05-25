@@ -1,0 +1,7 @@
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\bin\Release\Transaction Fee calculator.exe.config
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\bin\Release\Transaction Fee calculator.exe
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\bin\Release\Transaction Fee calculator.pdb
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\obj\Release\Transaction Fee calculator.csprojAssemblyReference.cache
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\obj\Release\Transaction Fee calculator.csproj.CoreCompileInputs.cache
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\obj\Release\Transaction Fee calculator.exe
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Transaction Fee calculator\obj\Release\Transaction Fee calculator.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction Fee calculator", "Transaction Fee calculator\Transaction Fee calculator.csproj", "{B28493F4-4941-4069-B87D-7E19C90830BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fee Calculator Tests", "Calculator Tests\Fee Calculator Tests.csproj", "{F1281A1F-8155-42A5-B2A1-827103877482}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B28493F4-4941-4069-B87D-7E19C90830BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28493F4-4941-4069-B87D-7E19C90830BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28493F4-4941-4069-B87D-7E19C90830BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28493F4-4941-4069-B87D-7E19C90830BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1281A1F-8155-42A5-B2A1-827103877482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1281A1F-8155-42A5-B2A1-827103877482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1281A1F-8155-42A5-B2A1-827103877482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1281A1F-8155-42A5-B2A1-827103877482}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2ACE6D87-5E72-4EA4-9BEE-6E4AC29239DF}
+	EndGlobalSection
+EndGlobal

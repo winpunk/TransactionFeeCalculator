@@ -1,0 +1,17 @@
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Calculator Tests.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Calculator Tests.pdb
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Transaction Fee calculator.exe
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Transaction Fee calculator.pdb
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Transaction Fee calculator.exe.config
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\obj\Debug\Unit Tests.csprojAssemblyReference.cache
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\obj\Debug\Unit Tests.csproj.CoreCompileInputs.cache
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\obj\Debug\Unit Tests.csproj.CopyComplete
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\obj\Debug\Calculator Tests.dll
+C:\Users\MaV\Documents\Cs projects\Transaction Fee calculator\Calculator Tests\obj\Debug\Calculator Tests.pdb
