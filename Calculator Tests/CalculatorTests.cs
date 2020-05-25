@@ -102,6 +102,7 @@ namespace Fee_Calculator_Tests
 
             Assert.AreEqual(29.0, (fee1 - fee2), 0.001);
 
+
             // Test different month transaction entries.
             SUT = new FeeCalculator();
             transaction = new Transaction()
@@ -117,26 +118,7 @@ namespace Fee_Calculator_Tests
             fee2 = SUT.AddMonthlyFee(transaction);
 
             Assert.AreEqual(fee1, fee2, 0.001);
-
-            // Test different month transaction entries after monthly fee was added.
-            SUT = new FeeCalculator();
-            transaction = new Transaction()
-            {
-                Date = new DateTime(2020, 5, 25),
-                MerchantName = "TELIA",
-                Fee = 1.2
-            };
-            fee1 = SUT.AddMonthlyFee(transaction);
-
-            transaction.Date = transaction.Date.AddMonths(1);
-            transaction.Fee = 1.2;
-            fee2 = SUT.AddMonthlyFee(transaction);
-
-            transaction.Date = transaction.Date.AddDays(1);
-            transaction.Fee = 1.2;
-            fee2 = SUT.AddMonthlyFee(transaction);
-
-            Assert.AreEqual(29.0, (fee1 - fee2), 0.001);
+           
 
             // Test if monthly fee is added if the basic fee was 0 and now 1.2.
             SUT = new FeeCalculator();
@@ -154,6 +136,7 @@ namespace Fee_Calculator_Tests
             fee2 = SUT.AddMonthlyFee(transaction);
             Assert.AreEqual(30.2, (fee2 - fee1), 0.001);
 
+
             // Test if monthly fee is added if couple of months has passed.
             SUT = new FeeCalculator();
             transaction = new Transaction()
@@ -169,6 +152,7 @@ namespace Fee_Calculator_Tests
             fee2 = SUT.AddMonthlyFee(transaction);
 
             Assert.AreEqual(0, (fee2 - fee1), 0.001);
+
 
             // Test if monthly fee is added if year has passed.
             SUT = new FeeCalculator();

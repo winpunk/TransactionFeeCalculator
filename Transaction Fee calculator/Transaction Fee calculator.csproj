@@ -53,11 +53,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Text Files\expected output.txt" />
-    <Content Include="Text Files\homework.txt" />
-    <Content Include="Text Files\transactions.txt" />
-  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,7 +45,8 @@ namespace Transaction_Fee_calculator
         public double AddMonthlyFee(Transaction transaction)
         {
             // Check transaction date and clear _monthlyFeeIssuedTo list if new month or year.
-            if ((transaction.Date.Month > _lastTransactionDate.Month) || (transaction.Date.Year > _lastTransactionDate.Year)) _monthlyFeeIssuedTo.Clear();
+            if ((transaction.Date.Month > _lastTransactionDate.Month) || (transaction.Date.Year > _lastTransactionDate.Year)) 
+                _monthlyFeeIssuedTo.Clear();
 
             // Check the _monthlyFeeIssuedTo list if merchant was not issued with a fee and if transaction fee > 0.
             if (!_monthlyFeeIssuedTo.Contains(transaction.MerchantName) && transaction.Fee > 0)

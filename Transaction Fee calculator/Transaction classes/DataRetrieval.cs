@@ -10,17 +10,17 @@ namespace Transaction_Fee_calculator
 
         public bool RetrieveDataFromLine(string fileLine, ref Transaction transaction)
         {
-            string[] collumns = fileLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] lineItems = fileLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             // Check if we have exactly 3 objects in the line. If everything ok, update transaction object.
-            if (collumns.Length == 3)
+            if (lineItems.Length == 3)
             {
-                DateTime.TryParse(collumns[0], out _dateTemp);
+                DateTime.TryParse(lineItems[0], out _dateTemp);
                 transaction.Date = _dateTemp;
 
-                transaction.MerchantName = collumns[1];
+                transaction.MerchantName = lineItems[1];
 
-                double.TryParse(collumns[2], out _amountTemp);
+                double.TryParse(lineItems[2], out _amountTemp);
                 transaction.Amount = _amountTemp;
 
                 return true;
