@@ -2,12 +2,12 @@
 
 namespace Transaction_Fee_calculator
 {
-    //-- For storage transaction data. --//
-    public class Transaction
+   
+    public class TransactionData : ITransactionData
     {
         public DateTime Date { get; set; }
         public string MerchantName { get; set; }
-        public double Amount { get; set; }
-        public double Fee { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Fee { get; set; }
     }
 }

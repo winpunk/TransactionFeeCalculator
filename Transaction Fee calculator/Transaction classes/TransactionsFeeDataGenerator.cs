@@ -3,39 +3,45 @@ using System.IO;
 
 namespace Transaction_Fee_calculator
 {
-    //-- For generating transactions fees data and outputting to the console window. --//
     public class TransactionsFeeDataGenerator
     {
-        public void GenerateData(string filePath)
+        private ITransactionData _transactionData;
+        private IDataGenerator _dataGenerator;
+        private IFeeCalculator _feeCalculator;
+        private IOutputWritter _consoleWritter;
+
+        public TransactionsFeeDataGenerator() : this (new TransactionData(), new DataGenerator(), new FeeCalculator(), new ConsoleWritter())
+        {
+
+        }
+        public TransactionsFeeDataGenerator(ITransactionData transactionData, IDataGenerator dataGenerator, IFeeCalculator feeCalculator, IOutputWritter outputWritter)
+        {
+            _transactionData = transactionData;
+            _dataGenerator = dataGenerator;
+            _feeCalculator = feeCalculator;
+            _consoleWritter = outputWritter;
+
+        }
+        public void OutputFeeData(string fileInputPath)
         {
             string fileLine = "";
 
-            var transaction = new Transaction();
-            var dataRetrieval = new DataRetrieval();
-            var feeCalculator = new FeeCalculator();
-
             try
             {
-                using (var file = new StreamReader(filePath))
+                using (var file = new StreamReader(fileInputPath))
                 {
                     while ((fileLine = file.ReadLine()) != null)
                     {
-                        // Check if we can retrieve transaction data from a file line and retrieve it.
-                        if (!dataRetrieval.RetrieveDataFromLine(fileLine, ref transaction))
+                        if (!_dataGenerator.GenerateDataFromLine(fileLine, ref _transactionData))
                             continue;
 
-                        // -- MOBILEPAY-2. Calculate the basic fee for all the clients.
-                        transaction.Fee = feeCalculator.CalculateBasicFee(transaction);
+                        _transactionData.Fee = _feeCalculator.AddBasicFee(_transactionData);
 
-                        // -- MOBILEPAY-3 and MOBILEPAY-4. Add discount ("TELIA" 10% off. "CIRKLE_K" 20% off. Others - no discount).
-                        transaction.Fee = feeCalculator.AddDiscount(transaction);
+                        _transactionData.Fee = _feeCalculator.AddDiscount(_transactionData);
 
-                        // -- MOBILEPAY-5. Invoice fee - 29 DKK every month.
-                        transaction.Fee = feeCalculator.AddMonthlyFee(transaction);
+                        _transactionData.Fee = _feeCalculator.AddMonthlyFee(_transactionData);
 
-                        // Round the fee to 2 decimal places (bankers rounding).
-                        transaction.Fee = Math.Round(transaction.Fee, 2);
-                        Console.WriteLine("{0:yyyy-MM-dd} {1} {2:0.00}", transaction.Date, transaction.MerchantName, transaction.Fee);
+                        _consoleWritter.Write(_transactionData);
                     }
                 }
             }

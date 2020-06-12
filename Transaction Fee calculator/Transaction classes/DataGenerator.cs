@@ -2,17 +2,15 @@
 
 namespace Transaction_Fee_calculator
 {
-    //-- For retrieval data in "Date merchantName amount" format. --//
-    public class DataRetrieval
+    public class DataGenerator : IDataGenerator
     {
         private DateTime _dateTemp;
-        private double _amountTemp;
+        private decimal _amountTemp;
 
-        public bool RetrieveDataFromLine(string fileLine, ref Transaction transaction)
+        public bool GenerateDataFromLine(string fileLine, ref ITransactionData transaction)
         {
             string[] lineItems = fileLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // Check if we have exactly 3 objects in the line. If everything ok, update transaction object.
             if (lineItems.Length == 3)
             {
                 DateTime.TryParse(lineItems[0], out _dateTemp);
@@ -20,12 +18,14 @@ namespace Transaction_Fee_calculator
 
                 transaction.MerchantName = lineItems[1];
 
-                double.TryParse(lineItems[2], out _amountTemp);
+                decimal.TryParse(lineItems[2], out _amountTemp);
                 transaction.Amount = _amountTemp;
 
                 return true;
             }
             return false;
         }
+
+        
     }
 }

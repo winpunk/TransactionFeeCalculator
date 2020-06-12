@@ -43,16 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Transaction classes\DataRetrieval.cs" />
+    <Compile Include="Transaction classes\ConsoleWritter.cs" />
+    <Compile Include="Transaction classes\DataGenerator.cs" />
+    <Compile Include="Transaction classes\DiscountEntry.cs" />
     <Compile Include="Transaction classes\FeeCalculator.cs" />
+    <Compile Include="Interfaces\IDataGenerator.cs" />
+    <Compile Include="Interfaces\ITransactionData.cs" />
+    <Compile Include="Interfaces\IOutputWritter.cs" />
+    <Compile Include="Interfaces\IFeeCalculator.cs" />
     <Compile Include="Transaction classes\TransactionsFeeDataGenerator.cs" />
     <Compile Include="MainProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transaction classes\Transaction.cs" />
+    <Compile Include="Transaction classes\TransactionData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)expected_output.txt" "$(TargetDir)" /c /y
+xcopy "$(SolutionDir)transactions.txt" "$(TargetDir)" /c /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
